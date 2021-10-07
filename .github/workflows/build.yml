@@ -3,11 +3,11 @@ on: [push, pull_request, workflow_dispatch]
 name: Build
 
 jobs:
-  build helix:
+  build_helix:
     runs-on: ubuntu-latest
     container:
       image: zmkfirmware/zmk-build-arm:2.4
-    name: Build
+    name: Build Helix
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -59,11 +59,11 @@ jobs:
         with:
           name: firmware
           path: helix_right_nice_nano.uf2
-  build reviung:
+  build_reviung:
     runs-on: ubuntu-latest
     container:
       image: zmkfirmware/zmk-build-arm:2.5
-    name: Build
+    name: Build Reviung
     steps:
       - name: Checkout
         uses: actions/checkout@v2
