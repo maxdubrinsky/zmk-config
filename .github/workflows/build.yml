@@ -28,13 +28,13 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - name: West Init
-        run: west init -l config
+        run: west init -l helix
       - name: West Update
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (Helix Left)
-        run: west build -s zmk/app -b nice_nano -- -DSHIELD=helix_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build -s zmk/app -b nice_nano -- -DSHIELD=helix_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/helix"
       - name: Helix DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano.dts.pre.tmp
@@ -48,7 +48,7 @@ jobs:
           name: firmware
           path: helix_left_nice_nano.uf2
       - name: West Build (Helix Right)
-        run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=helix_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build --pristine -s zmk/app -b nice_nano -- -DSHIELD=helix_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/helix"
 
       - name: Helix Right Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
@@ -84,13 +84,13 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
       - name: West Init
-        run: west init -l config
+        run: west init -l reviung41
       - name: West Update
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (REVIUNG41)
-        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=reviung41 -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=reviung41 -DZMK_CONFIG="${GITHUB_WORKSPACE}/reviung41"
       - name: REVIUNG41 DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nice_nano_v2.dts.pre.tmp
