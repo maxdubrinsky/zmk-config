@@ -15,11 +15,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-// -------------------------------------------------------------------------------------
-// | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   BKSP    |
-// | TAB  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    '      |
-// | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT(RET) |
-//                         | GUI | LWR | SPC | RSE  | ALT |
             bindings = <
    &kp ESC       &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &mt LCTRL TAB &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
@@ -29,11 +24,6 @@
         };
 
         lower_layer {
-// ------------------------------------------------------------------------------------
-// |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &   |  *   |  (  |  )  |    DEL    |
-// |    |  _  |  +  |  {  |  }  | "|" |   | F6  | MINUS| EQUAL| LBRC| RBRC|   PIPE    |
-// |    | ESC | GUI | ALT | CAPS|  "  |   | F12 | LFT  | UP   | DWN | RGT | SHFT(RET) |
-//                       |     |     | RET | ADJ |      |
             bindings = <
 &trans &kp EXCL &kp AT  &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS  &kp N8    &kp LPAR  &kp RPAR  &kp DEL
 &trans &kp F1   &kp F2  &kp F3   &kp F4   &kp F5         &kp F6    &kp MINUS &kp EQUAL &kp LBRC  &kp RBRC  &kp PIPE
@@ -43,11 +33,6 @@
         };
 
         raise_layer {
-// ----------------------------------------------------------------------------
-// |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL |
-// |    |  -  |  =  |  [  |  ]  |  \  |   | F6  | UNDR| PLUS| LBKT| RBKT| BSLH|
-// |    | ESC | GUI | ALT | CAPS|  "  |   | F7  | F8  | F9  | F10 | F11 | F12 |
-//                       |     | ADJ | BKSP |    |     |
             bindings = <
    &trans &kp N1   &kp N2  &kp N3   &kp N4   &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
    &trans &kp F1   &kp F2  &kp F3   &kp F4   &kp F5        &kp F6    &kp UNDER &kp PLUS  &kp LBKT  &kp RBKT  &kp BSLH      
@@ -57,11 +42,6 @@
         };
 
         adjust_layer {
-// -----------------------------------------------------------------------------------------
-// | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
-// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI+ |    |         |   |       |     |     |     |     |        |
-// |          |          |          |          |    |         |   | RESET |     |     |     |     |        |
-//                                              |     |     |     |     |     |
             bindings = <
    &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &rgb_ug RGB_TOG &out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
    &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none           &none        &none        &none        &none        &none        &none        &none
