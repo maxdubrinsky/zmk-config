@@ -25,27 +25,27 @@
 
         lower_layer {
             bindings = <
-&trans &kp EXCL &kp AT  &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS  &kp N8    &kp LPAR  &kp RPAR  &kp DEL
+&trans &kp EXCL &kp AT  &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS  &kp N8    &kp LPAR  &kp RPAR  &trans
 &trans &kp F1   &kp F2  &kp F3   &kp F4   &kp F5         &kp F6    &kp MINUS &kp EQUAL &kp LBRC  &kp RBRC  &kp PIPE
-&trans &kp F7   &kp F8  &kp F9   &kp F10  &kp F11        &kp F12   &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT &mt RSHFT RET
+&trans &kp F7   &kp F8  &kp F9   &kp F10  &kp F11        &kp F12   &trans    &kp HOME  &kp PG_UP &kp PG_DN &kp END
                         &trans      &trans        &trans       &mo 3       &trans
             >;
         };
 
         raise_layer {
             bindings = <
-   &trans &kp N1   &kp N2  &kp N3   &kp N4   &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
+   &trans &kp N1   &kp N2  &kp N3   &kp N4   &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &trans
    &trans &kp F1   &kp F2  &kp F3   &kp F4   &kp F5        &kp F6    &kp UNDER &kp PLUS  &kp LBKT  &kp RBKT  &kp BSLH      
-   &trans &kp F7   &kp F8  &kp F9   &kp F10  &kp F11       &kp F12   &kp HOME  &kp PG_UP &kp PG_DN &kp END   &mt RSFT RET
+   &trans &kp F7   &kp F8  &kp F9   &kp F10  &kp F11       &kp F12   &trans    &kp LEFT  &kp UP    &kp DOWN  &kp RIGHT
                                &trans    &mo 3      &trans     &trans    &trans
             >;
         };
 
         adjust_layer {
             bindings = <
-   &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &rgb_ug RGB_TOG &out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
+   &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &out OUT_TOG    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR   &kp DEL
    &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none           &none        &none        &none        &none        &none        &none        &none
-   &none           &none           &none           &none           &none           &none        &reset       &none        &none        &none        &none        &none
+   &none           &none           &none           &rgb_ug RGB_TOG &none           &none        &reset       &none        &none        &none        &none        &none
                                                        &trans      &trans       &tog 3        &trans      &trans
             >;
         };
