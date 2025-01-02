@@ -11,15 +11,24 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    behaviors {
+        td_gh: tap_dance_mod_tap {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LGUI>, <&kp LG(LC(LALT))>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-   &mt LG(LC(LALT)) ESC &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &mt LG(LC(LALT)) ESC &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &mt RG(RC(RALT)) BSPC
    &mt LCTRL TAB        &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSFT             &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
-                                &kp LGUI  &mo 1 &kp SPACE &mo 2  &kp RALT
+                                  &td_gh &mo 1  &kp SPACE &mo 2  &kp RALT
             >;
         };
 
